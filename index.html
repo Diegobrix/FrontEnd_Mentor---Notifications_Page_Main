@@ -7,21 +7,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Notifications page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
 
   <!-- Scripts -->
-</head>
-<body>
 
-  Notifications 3
+  <!-- Notifications 3
 
   Mark all as read
 
@@ -46,11 +37,91 @@
   2 weeks ago
 
   Anna Kim left the group Chess Club
-  2 weeks ago
-  
+  2 weeks ago -->
+</head>
+<body>
+  <main>
+    <!-- Page's Header -->
+    <section aria-labelledby="notifications-title" class="notifications-header">
+      <div class="notifications-title-wrapper">
+        <h1 id="notifications-title">notifications</h1>
+        <span class="notifications-display">3</span>
+      </div>
+      <button class="clear-notifications">Mark all as read</button>
+    </section>
+    <!-- Notification Messages Section -->
+    <section>
+      <!-- Basic Structure of the Notification -->
+      <div class="notification-fancy" visualized="false">
+        <figure>
+          <img src="./assets/images/avatar-mark-webber.webp" alt="">
+        </figure>
+        <h2 class="profile-name">mark webber</h2>
+        <h3 class="action">reacted to your recent post</h3>
+        <a href="#" class="optional-link">My first tournament today!</a>
+        <i class="visualized-indicator"></i>
+      </div>
+      <div class="notification-fancy" visualized="false">
+        <figure>
+          <img src="./assets/images/avatar-angela-gray.webp" alt="">
+        </figure>
+        <h2 class="profile-name">angela gray</h2>
+        <h3 class="action">followed you</h3>
+        <i class="visualized-indicator"></i>
+      </div>
+      <div class="notification-fancy" visualized="false">
+        <figure>
+          <img src="./assets/images/avatar-jacob-thompson.webp" alt="">
+        </figure>
+        <h2 class="profile-name">jacob thompson</h2>
+        <h3 class="action">has joined your group</h3>
+        <a href="#" class="optional-link">Chess Club</a>
+        <i class="visualized-indicator"></i>
+      </div>
+      <div class="notification-fancy" visualized="true">
+        <figure>
+          <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="">
+        </figure>
+        <h2 class="profile-name">rizky hasanuddin</h2>
+        <h3 class="action">sent you a private message</h3>
+        <p class="message">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
+        <i class="visualized-indicator"></i>
+      </div>
+      <div class="notification-fancy" visualized="true">
+        <figure>
+          <img src="./assets/images/avatar-kimberly-smith.webp" alt="">
+        </figure>
+        <h2 class="profile-name">kimberly smith</h2>
+        <h3 class="action">commented on your picture</h3>
+        <i class="picture">
+          <img src="./assets/images/image-chess.webp" alt="">
+        </i>
+        <i class="visualized-indicator"></i>
+      </div>
+      <div class="notification-fancy" visualized="true">
+        <figure>
+          <img src="./assets/images/avatar-nathan-peterson.webp" alt="">
+        </figure>
+        <h2 class="profile-name">nathan peterson</h2>
+        <h3 class="action">reacted to your recent post</h3>
+        <a href="" class="optional-link">5 end-game strategies to increase your win rate</a>
+        <i class="visualized-indicator"></i>
+      </div>
+      <div class="notification-fancy" visualized="true">
+        <figure>
+          <img src="./assets/images/avatar-anna-kim.webp" alt="">
+        </figure>
+        <h2 class="profile-name">anna kim</h2>
+        <h3 class="action">left the group</h3>
+        <a href="#" class="optional-link">Chess Club</a>
+        <i class="visualized-indicator"></i>
+      </div>
+    </section>
+  </main>
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Diego</a>.
   </div>
 </body>
 </html>
