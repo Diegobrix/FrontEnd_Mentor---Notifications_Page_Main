@@ -1,0 +1,32 @@
+:root {
+    /* Primary Colours */
+    --primary-100: hsl(1 90% 64%);
+    --primary-200: hsl(219 85% 26%);
+
+    /* Neutral Colours */
+    --neutral-100: hsl(0 0% 100%);
+    --neutral-200: hsl(210 60% 98%);
+    --neutral-300: hsl(211 68% 94%);
+    --neutral-400: hsl(205 33% 90%);
+    --neutral-500: hsl(219 14% 63%);
+    --neutral-600: hsl(219 12% 42%);
+    --neutral-700: hsl(224 21% 14%);
+
+    /* Typography */
+    font-size: 16px;
+
+    --fw-100: 500;
+    --fw-200: 800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+}
