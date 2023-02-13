@@ -50,84 +50,77 @@
 
 body {
     min-height: 100vh;
-    min-height: 100dvh;
+
+    width: 100vw;
+    height: 100vh;
+
+    width: 100dvw;
+    height: 100dvh;
 }
 
-button, 
+h1,
+span.profile-name {
+    text-transform: capitalize;
+}
+
+button,
 a {
     cursor: pointer;
 }
 
-a {
-    text-decoration: none;
-}
-
-h1,
-h2.profile-name {
-    text-transform: capitalize;
-}
-
-.notification-fancy[visualized="true"] .visualized-indicator{
-    display: none;
-}
-
-i.visualized-indicator {
-    display: block;
-    width: .5rem;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: var(--primary-100);
-    margin-left: 10px;
+figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
-/* Mobile - 375px */
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Mobile - 375px */ 
 
-    width: auto;
-    height: auto;
+/*Only for Webkit Browsers*/
+:root::-webkit-scrollbar {
+    width: 0;
 }
 
 .notifications-header {
-    display: inherit;
+    display: flex;
     justify-content: space-between;
-    align-items: center;
 
-    width: 100%;
+    width: auto;
     padding: 1rem;
+    margin-top: 1rem;
 }
 
-.notifications-header .notifications-title-wrapper {
+.notifications-header .title-wrapper {
     display: inherit;
-    gap: .5rem;
+
+    gap: 0 10px;
 }
 
-h1#notifications-title {
-    font-weight: var(--fw-200);
-    font-size: 1.2rem;
-}
-
-.notifications-display {
+.title-wrapper .notifications-display {
     display: grid;
-    place-content: center;
-    width: 1.9rem;
-    height: 1.5rem;
+    place-items: center;
+
+    width: 1.5rem;
+    aspect-ratio: 16/9;
+
+    font-size: .8rem;
 
     background: var(--primary-200);
     color: var(--neutral-100);
-    font-weight: var(--fw-100);
     border-radius: 5px;
 }
 
-.notifications-header .clear-notifications {
+.title-wrapper > * {
+    font-weight: var(--fw-200);
+}
+
+.notifications-clear {
     background: #0000;
-    color: var(--neutral-600);
     border: 0;
+
     font-size: .9rem;
     font-weight: var(--fw-100);
 }
@@ -136,23 +129,75 @@ h1#notifications-title {
     display: flex;
     flex-direction: column;
 
-    gap: .5rem 0;
-
-    padding: 0 .8rem;
-}
-
-.notification-fancy {
-    display: inherit;
     align-items: center;
 
-    flex-wrap: wrap;
+    gap: 10px 0;
+
+    width: auto;
+    padding: 1rem;
+}
+
+.notifications-wrapper .notification-fancy {
+    display: flex;
+
+    gap: 0 1rem;
+    width: 100%;
 
     padding: 1rem;
 }
 
+.notification-fancy[visualized="true"] .read-indicator {
+    display: none;
+}
+
 .notification-fancy[visualized="false"] {
-    background: var(--neutral-200);
+    background: var(--neutral-300);
     border-radius: 10px;
-    outline: 1px dashed blue;
+}
+
+.notification-fancy .profile-pic {
+    width: 3rem;
+    aspect-ratio: 1;
+}
+
+.notification-fancy .notification-description {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: calc(100% - 3rem);
+}
+
+.description-details {
+    width: 100%;
+}
+
+.profile-name {
+    font-size: .9rem;
+    font-weight: var(--fw-200);
+}
+
+h4 {
+    font-size: .8rem;
+    font-weight: var(--fw-100);
+}
+
+.optional-link a {
+    text-decoration: none;
+    font-weight: var(--fw-200);
+}
+
+.link-secondary a {
+    color: var(--neutral-600);
+}
+
+.link-primary a {
+    color: var(--primary-200);
+}
+
+.date {
+    font-size: .8rem;
+    font-weight: var(--fw-100);
+    color: var(--neutral-500);    
 }
 /* Desktop - 1440px */

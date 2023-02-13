@@ -11,6 +11,7 @@
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
 
   <!-- Scripts -->
+  <script src="./js/notifications-handler.js"></script>
 
   <!-- Notifications 3
 
@@ -41,91 +42,80 @@
 </head>
 <body>
   <main>
-    <!-- Page's Header -->
-    <section aria-labelledby="notifications-title" class="notifications-header">
-      <div class="notifications-title-wrapper">
-        <h1 id="notifications-title">notifications</h1>
-        <span class="notifications-display">3</span>
+    <section aria-labelledby="notifications" class="notifications-header">
+      <div class="title-wrapper">
+        <h1 id="notifications">notifications</h1>
+        <i class="notifications-display">3</i>
       </div>
-      <button class="clear-notifications">Mark all as read</button>
+      <button class="notifications-clear">Mark all as read</button>
     </section>
-    <!-- Notification Messages Section -->
     <section class="notifications-wrapper">
-      <!-- Basic Structure of the Notification -->
       <div class="notification-fancy" visualized="false">
-        <figure>
+        <figure class="profile-pic">
           <img src="./assets/images/avatar-mark-webber.webp" alt="">
         </figure>
-        <h2 class="profile-name">mark webber</h2>
-        <h3 class="action">reacted to your recent post</h3>
-        <a href="#" class="optional-link">My first tournament today!</a>
-        <i class="visualized-indicator"></i>
-        <p class="date"></p>
+        <div class="notification-description">
+          <h4><span class="profile-name">mark webber</span> reacted to your recent post <span class="optional-link link-secondary"><a href="">My first tournament</a></span></h4>
+          <i class="read-indicator"></i>
+          <div class="description-details">
+            <p class="date">1m ago</p>
+          </div>
+        </div>
       </div>
       <div class="notification-fancy" visualized="false">
-        <figure>
+        <figure class="profile-pic">
           <img src="./assets/images/avatar-angela-gray.webp" alt="">
         </figure>
-        <h2 class="profile-name">angela gray</h2>
-        <h3 class="action">followed you</h3>
-        <i class="visualized-indicator"></i>
-        <p class="date"></p>
+        <div class="notification-description">
+          <h4><span class="profile-name">angela gray</span> followed you</h4>
+          <i class="read-indicator"></i>
+          <div class="description-details">
+            <p class="date">5m ago</p>
+          </div>
+        </div>
       </div>
       <div class="notification-fancy" visualized="false">
-        <figure>
+        <figure class="profile-pic">
           <img src="./assets/images/avatar-jacob-thompson.webp" alt="">
         </figure>
-        <h2 class="profile-name">jacob thompson</h2>
-        <h3 class="action">has joined your group</h3>
-        <a href="#" class="optional-link">Chess Club</a>
-        <i class="visualized-indicator"></i>
-        <p class="date"></p>
+        <div class="notification-description">
+          <h4><span class="profile-name">jacob thompson</span> has joined your group <span class="optional-link link-primary"><a href="">Chess Club</a></span></h4>
+          <i class="read-indicator"></i>
+          <div class="description-details">
+            <p class="date">1 day ago</p>
+          </div>
+        </div>
       </div>
       <div class="notification-fancy" visualized="true">
-        <figure>
+        <figure class="profile-pic">
           <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="">
         </figure>
-        <h2 class="profile-name">rizky hasanuddin</h2>
-        <h3 class="action">sent you a private message</h3>
-        <p class="message">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
-        <i class="visualized-indicator"></i>
-        <p class="date"></p>
+        <div class="notification-description">
+          <h4><span class="profile-name">rizky hasanuddin</span> sent you a private message</h4>
+          <i class="read-indicator"></i>
+          <div class="description-details">
+            <p class="date">5 days ago</p>
+          </div>
+        </div>
       </div>
-      <div class="notification-fancy" visualized="true">
-        <figure>
+      <!-- 
+      <div class="notification-fancy">
+        <figure class="profile-pic">
           <img src="./assets/images/avatar-kimberly-smith.webp" alt="">
         </figure>
-        <h2 class="profile-name">kimberly smith</h2>
-        <h3 class="action">commented on your picture</h3>
-        <i class="picture">
-          <img src="./assets/images/image-chess.webp" alt="">
-        </i>
-        <i class="visualized-indicator"></i>
-        <p class="date"></p>
       </div>
-      <div class="notification-fancy" visualized="true">
-        <figure>
+      <div class="notification-fancy">
+        <figure class="profile-pic">
           <img src="./assets/images/avatar-nathan-peterson.webp" alt="">
         </figure>
-        <h2 class="profile-name">nathan peterson</h2>
-        <h3 class="action">reacted to your recent post</h3>
-        <a href="" class="optional-link">5 end-game strategies to increase your win rate</a>
-        <i class="visualized-indicator"></i>
-        <p class="date"></p>
       </div>
-      <div class="notification-fancy" visualized="true">
-        <figure>
+      <div class="notification-fancy">
+        <figure class="profile-pic">
           <img src="./assets/images/avatar-anna-kim.webp" alt="">
         </figure>
-        <h2 class="profile-name">anna kim</h2>
-        <h3 class="action">left the group</h3>
-        <a href="#" class="optional-link">Chess Club</a>
-        <i class="visualized-indicator"></i>
-        <p class="date"></p>
-      </div>
+      </div> -->
     </section>
   </main>
-
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Diego</a>.
