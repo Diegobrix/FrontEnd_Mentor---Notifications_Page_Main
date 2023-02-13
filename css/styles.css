@@ -13,10 +13,32 @@
     --neutral-700: hsl(224 21% 14%);
 
     /* Typography */
-    font-size: 16px;
-
     --fw-100: 500;
     --fw-200: 800;
+
+    font-size: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: local('Plus Jakarta Sans'),
+    url(../assets/fonts/static/PlusJakartaSans-ExtraBold.ttf) format("truetype");
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: local('Plus Jakarta Sans'),
+    url(../assets/fonts/static/PlusJakartaSans-Medium.ttf) format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: local('Plus Jakarta Sans'),
+    url(../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf) format("truetype");
+    font-weight: 400;
 }
 
 * {
@@ -30,3 +52,107 @@ body {
     min-height: 100vh;
     min-height: 100dvh;
 }
+
+button, 
+a {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2.profile-name {
+    text-transform: capitalize;
+}
+
+.notification-fancy[visualized="true"] .visualized-indicator{
+    display: none;
+}
+
+i.visualized-indicator {
+    display: block;
+    width: .5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--primary-100);
+    margin-left: 10px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* Mobile - 375px */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: auto;
+    height: auto;
+}
+
+.notifications-header {
+    display: inherit;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 1rem;
+}
+
+.notifications-header .notifications-title-wrapper {
+    display: inherit;
+    gap: .5rem;
+}
+
+h1#notifications-title {
+    font-weight: var(--fw-200);
+    font-size: 1.2rem;
+}
+
+.notifications-display {
+    display: grid;
+    place-content: center;
+    width: 1.9rem;
+    height: 1.5rem;
+
+    background: var(--primary-200);
+    color: var(--neutral-100);
+    font-weight: var(--fw-100);
+    border-radius: 5px;
+}
+
+.notifications-header .clear-notifications {
+    background: #0000;
+    color: var(--neutral-600);
+    border: 0;
+    font-size: .9rem;
+    font-weight: var(--fw-100);
+}
+
+.notifications-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    gap: .5rem 0;
+
+    padding: 0 .8rem;
+}
+
+.notification-fancy {
+    display: inherit;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    padding: 1rem;
+}
+
+.notification-fancy[visualized="false"] {
+    background: var(--neutral-200);
+    border-radius: 10px;
+    outline: 1px dashed blue;
+}
+/* Desktop - 1440px */
