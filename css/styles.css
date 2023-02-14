@@ -64,7 +64,10 @@ span.profile-name {
 }
 
 button,
-a {
+a,
+.profile-name,
+figure,
+img {
     cursor: pointer;
 }
 
@@ -146,12 +149,8 @@ figure > img {
     padding: 1rem;
 }
 
-.notification-fancy[visualized="true"] .read-indicator {
-    display: none;
-}
-
 .notification-fancy[visualized="false"] {
-    background: var(--neutral-300);
+    background: var(--neutral-200);
     border-radius: 10px;
 }
 
@@ -199,5 +198,54 @@ h4 {
     font-size: .8rem;
     font-weight: var(--fw-100);
     color: var(--neutral-500);    
+}
+
+.notification {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.notification .notification-message {
+    align-self: flex-end;
+
+    width: calc(100% - 5rem);
+    padding: 1rem;
+    
+
+    border: 1px solid var(--neutral-400);
+    border-radius: 5px;
+
+    font-size: .85rem;
+    transition: all .3s;
+}
+
+ .notification-fancy[visualized="false"] .notification-description h4::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    aspect-ratio: 1;
+    background: var(--primary-100);
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.commented-img {
+    justify-self: end;
+    width: auto;
+}
+
+.notification-fancy:has(.commented-img) .notification-description {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 10px;
+}
+
+.notification-message:hover {
+    background: var(--neutral-300);
+    cursor: pointer;
 }
 /* Desktop - 1440px */
