@@ -87,6 +87,10 @@ figure > img {
     width: 0;
 }
 
+main {
+    width: clamp(300px, 100%, 600px);
+}
+
 .notifications-header {
     display: flex;
     justify-content: space-between;
@@ -213,7 +217,6 @@ h4 {
     width: calc(100% - 5rem);
     padding: 1rem;
     
-
     border: 1px solid var(--neutral-400);
     border-radius: 5px;
 
@@ -249,3 +252,17 @@ h4 {
     cursor: pointer;
 }
 /* Desktop - 1440px */
+@media screen and (width >= 600px) {
+    body {
+        padding-top: 2rem;
+        background: var(--neutral-200);
+    }
+
+    main {
+        width: clamp(375px, 50%, 1000px);
+
+        margin: auto;
+        background: var(--neutral-100);
+        border-radius: 15px;
+    }
+}
