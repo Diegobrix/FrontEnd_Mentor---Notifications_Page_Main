@@ -6,6 +6,9 @@ const display = document.querySelector(".notifications-display");
 //Listeners
 btnClear.addEventListener("click", ClearNotifications);
 window.addEventListener("load", NotificationsCounter);
+unreadNotifications.forEach((element) => {
+    element.addEventListener("click", ReadNotifications);
+});
 
 //Functions
 function ClearNotifications() 
@@ -29,4 +32,9 @@ function NotificationsCounter()
     }));
 
     display.innerHTML = (notificationsTotal);
+}
+
+function ReadNotifications()
+{
+    this.setAttribute('visualized', 'true');
 }
