@@ -67,7 +67,8 @@ button,
 a,
 .profile-name,
 figure,
-img {
+img,
+.notification-fancy[visualized = "false"] {
     cursor: pointer;
 }
 
@@ -77,7 +78,7 @@ figure > img {
     object-fit: contain;
 }
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution { margin-top: 1rem;font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
 /* Mobile - 375px */ 

@@ -36,5 +36,11 @@ function NotificationsCounter()
 
 function ReadNotifications()
 {
-    this.setAttribute('visualized', 'true');
+    let state = this.getAttribute("visualized");
+    
+    if(state == "false")
+    {
+        this.setAttribute("visualized", "true");
+        NotificationsCounter();
+    }
 }
